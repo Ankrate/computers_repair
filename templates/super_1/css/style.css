@@ -1,0 +1,214 @@
+.contacts .row {
+  width: 100%;
+}
+.contacts .image-wrapper {
+  display: flex;
+  align-items: center;
+  float: left;
+  font-size: 1.5em;
+  padding-right: 15px;
+}
+.image-wrapper img {
+border-top-left-radius: 60px 60px;
+border-bottom-right-radius: 60px 60px;
+}
+/* меню */
+.header-line {
+  border-bottom: 1px solid #cacaca ;
+}
+.nav-dropdown .dropdown-item {
+  line-height: 1;
+}
+.cid-tmqWv0MZkc .dropdown .dropdown-menu .dropdown-item {
+  width: 450px;
+}
+.dropdown-menu {
+  max-width: 450px;
+-webkit-hyphens: manual;
+-moz-hyphens: manual;
+-ms-hyphens: manual;
+}
+.dropdown-item {
+  white-space: normal;
+}
+/* / меню */
+p {
+  font-size: 1.2em;
+  line-height: 1.2;
+}
+/* Мессенджеры */
+.uk-hidden, [hidden] {
+  display: none !important
+}
+.messenger {
+  display: block;
+  position: fixed;
+  right: 5%;
+  bottom: 15%;
+  width: 60px;
+  height: 60px;
+  z-index: 100;
+  /* overflow: hidden; */
+}
+.puls {
+    position: fixed;
+    /* right: 20px; */
+    /* bottom: 20px; */
+    /* transform: translate(-50%, -50%); */
+    border-radius: 50%;
+    width: 60px;
+    /* height: 60px; */
+    /* z-index: 9999; */
+    background-color: #f70606;
+    /* background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath fill='%23FFF' d='M23.91 3.79L20.3 20.84c-.25 1.21-.98 1.5-2 .94l-5.5-4.07-2.66 2.57c-.3.3-.55.56-1.1.56-.72 0-.6-.27-.84-.95L6.3 13.7l-5.45-1.7c-1.18-.35-1.19-1.16.26-1.75l21.26-8.2c.97-.43 1.9.24 1.53 1.73z'/%3e%3c/svg%3e"); */
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.puls:before,
+.puls:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    border: 50%;
+    border: 1px solid #f70606;
+    left: -20px;
+    right: -20px;
+    top: -20px;
+    bottom: -20px;
+    border-radius: 50%;
+    animation: border-animate 1.5s linear infinite;
+    opacity: 0;
+}
+.puls:after{
+    animation-delay: .5s;
+}
+@keyframes border-animate
+{
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+.messenger .pos-relative {
+  position: relative;
+}
+.messenger-btn {
+  box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, .2);
+padding: 0;
+display: block;
+width: 60px;
+height: 60px;
+border-radius: 60px;
+background-color: #f70606;
+position: absolute;
+left: 0;
+top: 0;
+cursor: pointer;
+z-index: 2;
+  }
+
+.messenger-btn span {
+  color: #fff;
+  font-weight: 400;
+}
+.messenger-btn.active {
+  -moz-transform: rotate(90deg); /* Для Firefox */
+  -ms-transform: rotate(90deg); /* Для IE */
+  -webkit-transform: rotate(90deg); /* Для Safari, Chrome, iOS */
+  -o-transform: rotate(90deg); /* Для Opera */
+  transform: rotate(90deg);
+   transition: 1s;
+}
+
+.messenger-btn.on-active {
+  -moz-transform: rotate(0deg); /* Для Firefox */
+  -ms-transform: rotate(0deg); /* Для IE */
+  -webkit-transform: rotate(0deg); /* Для Safari, Chrome, iOS */
+  -o-transform: rotate(0deg); /* Для Opera */
+  transform: rotate(0deg);
+   transition: 1s;
+}
+
+
+.messenger-btn img {
+  width: 60px;
+  height: 60px;
+}
+.messenger-links {
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+  width: 60px;
+  transform: scale(0);
+  transform-origin: 50% 100%;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: 0;
+}
+.messenger-links.show {
+  left: -2px;
+  transform: scale(1);
+}
+.messenger-links a {
+  /* width: 40px; */
+  /* margin-left: 4px; */
+}
+.messenger-links img {
+  max-width: 65px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  padding-bottom: 5px;
+}
+.messenger-links a:hover img {
+  transform: scale(1.1);
+  text-decoration: none;
+}
+
+
+.messenger-title {
+    position: absolute;
+    right: 80px;
+    white-space: nowrap;
+    background: #fff;
+    padding: 9px 13px;
+    font-size: 15px;
+    border-radius: 3px;
+    -webkit-transform: translateX(0%) translateY(-50%);
+    transform: translateX(0%) translateY(-50%);
+    top: 50%;
+    background: #292929;
+    color: #fff;
+    opacity: .85;
+    transition: all 0.1s linear;
+}
+.messenger-title::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: solid transparent;
+    border-width: 10px;
+    top: 50%;
+    right: -20px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-left-color: #292929;
+}
+/* /мессенджеры */
+@media (max-width: 500px)
+{
+  .cid-tmqWv0MZkc .dropdown .dropdown-menu .dropdown-item {
+    width: 300px;
+  }
+}
